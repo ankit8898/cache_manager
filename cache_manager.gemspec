@@ -1,17 +1,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "cache_reader/version"
+require "cache_manager/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "cache_reader"
-  s.version     = CacheReader::VERSION
+  s.name        = "cache_manager"
+  s.version     = CacheManager::VERSION
   s.authors     = ["Ankit Gupta"]
-  s.email       = ["ankit.gupta@move.com"]
-  s.homepage    = "http://www.google.com"
-  s.summary     = "Summary of CacheReader."
-  s.description = "Description of CacheReader."
+  s.email       = ["ankit.gupta8898@gmail.com"]
+  s.homepage    = "https://github.com/ankit8898/cache_manager"
+  s.summary     = "Rails engine to manage your cache"
+  s.description = "Cache manager helps in managing your cache and it's keys"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

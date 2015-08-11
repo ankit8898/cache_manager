@@ -1,4 +1,4 @@
-CacheReader::Engine.routes.draw do
+CacheManager::Engine.routes.draw do
 
   resources :stats, only: :index
   resources :keys, only: [:index, :show]

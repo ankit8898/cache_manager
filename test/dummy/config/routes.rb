@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount CacheReader::Engine => "/cache_reader"
+  mount CacheManager::Engine => "/cache_manager"
 end

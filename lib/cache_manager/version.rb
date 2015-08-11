@@ -1,3 +1,3 @@
-module CacheReader
+module CacheManager
   VERSION = "0.0.1"
 end

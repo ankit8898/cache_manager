@@ -1,6 +1,6 @@
-require_dependency "cache_reader/application_controller"
+require_dependency "cache_manager/application_controller"
 
-module CacheReader
+module CacheManager
   class KeysController < ApplicationController
     def index
       @keys = Key.all

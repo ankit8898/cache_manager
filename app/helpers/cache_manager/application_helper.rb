@@ -1,4 +1,4 @@
-module CacheReader
+module CacheManager
   module ApplicationHelper
   end
 end

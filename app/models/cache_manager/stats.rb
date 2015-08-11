@@ -1,4 +1,4 @@
-module CacheReader
+module CacheManager
   class Stats
 
     #Rails.cache.instance_variable_get(:@data).keys
