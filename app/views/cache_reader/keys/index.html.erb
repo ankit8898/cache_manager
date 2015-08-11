@@ -4,12 +4,18 @@
     <th>
       Key
     </th>
+    <th>
+      Action
+    </th>
   </thead>
   <tbody>
     <% @keys.each do |key| %>
       <tr>
         <td>
           <%= link_to key, key_url(id: key) %>
+        </td>
+        <td>
+          <%= link_to 'Delete', '#',class: 'btn btn-danger btn-xs' %>
         </td>
       </tr>
     <% end %>
