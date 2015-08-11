@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CacheReader</title>
+    <%= stylesheet_link_tag    "cache_reader/application", media: "all" %>
+    <%= javascript_include_tag "cache_reader/application" %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet">
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <%= render partial: 'shared/navbar' %>
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
