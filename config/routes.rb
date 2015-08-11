@@ -1,7 +1,7 @@
 CacheReader::Engine.routes.draw do
 
-  resources :articles
   resources :stats, only: :index
+  resources :keys, only: [:index, :show]
 
   root to: "stats#index"
 end
