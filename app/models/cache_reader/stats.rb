@@ -1,11 +1,11 @@
 module CacheReader
   class Stats
 
-    attr_reader :stats, :keys
-
-    def initialize
-      @stats = Rails.cache.stats
-      @keys  = Rails.cache.instance_variable_get(:@data).keys
+    #Rails.cache.instance_variable_get(:@data).keys
+    class << self
+      def all
+        Rails.cache.stats
+      end
     end
   end
 end
