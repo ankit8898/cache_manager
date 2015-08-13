@@ -1,7 +1,17 @@
-<h1>
-  <%= @keys.count %>
-  keys
-</h1>
+<div class="row">
+  <div class="col-md-8">
+    <h1>
+      <%= pluralize(@keys.count, 'key') %>
+    </h1>
+  </div>
+  <div class="col-md-4">
+    <%= form_tag({controller: :keys, action: :flush}, method: "put") do %>
+    <%= hidden_field_tag :key, 'all' %>
+    <%= submit_tag "Flush All Keys" ,class: 'btn btn-block btn-danger' %>
+    <% end %>
+  </div>
+</div>
+
 <table class="table">
   <thead>
     <th>
@@ -19,8 +29,10 @@
       </td>
       <td>
         <%#= link_to 'Delete', '#',class: 'btn btn-danger btn-xs' %>
-        <%#= link_to 'Delete',  "/cache_manager/keys/a",  method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger btn-xs' %>
-        <%= link_to "Visit Other Site", "http://www.rubyonrails.org/", data: { confirm: "Are you sure?" } %>
+        <%= form_tag({controller: :keys, action: :flush}, method: "put") do %>
+        <%= hidden_field_tag :key, key %>
+        <%= submit_tag "Flush" ,class: 'btn btn-danger btn-xs' %>
+        <% end %>
       </td>
     </tr>
     <% end %>

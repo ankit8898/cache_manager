@@ -14,6 +14,14 @@ module CacheManager
         new.all
       end
 
+      def flush(id)
+        if id == 'all'
+          Rails.cache.clear
+        else
+          Rails.cache.delete(id)
+       end
+      end
+
       def find(id)
         Rails.cache.read(id)
       end

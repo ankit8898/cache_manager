@@ -10,11 +10,10 @@ module CacheManager
       @key = Key.find(params[:id])
     end
 
-    def destroy
-      puts "-------#{params[:id]}"
-      @key = Key.destroy(params[:id])
+    def flush
+      @key = Key.flush(params[:key])
       respond_to do |format|
-        format.html { redirect_to root_url, notice: 'Key successfully deleted.' }
+        format.html { redirect_to keys_url, notice: 'Keys were successfully flushed.' }
       end
     end
   end
