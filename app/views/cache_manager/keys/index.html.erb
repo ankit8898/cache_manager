@@ -1,4 +1,7 @@
-<h1> <%= @keys.count %> keys </h1>
+<h1>
+  <%= @keys.count %>
+  keys
+</h1>
 <table class="table">
   <thead>
     <th>
@@ -10,16 +13,16 @@
   </thead>
   <tbody>
     <% @keys.each do |key| %>
-      <tr>
-        <td>
-          <%= link_to key, key_url(id: key) %>
-        </td>
-        <td>
-          <%#= link_to 'Delete', '#',class: 'btn btn-danger btn-xs' %>
-          <%#= link_to 'Delete',  "/cache_manager/keys/a",  method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger btn-xs' %>
-          <%= link_to "Visit Other Site", "http://www.rubyonrails.org/", data: { confirm: "Are you sure?" } %>
-        </td>
-      </tr>
+    <tr>
+      <td>
+        <%= link_to key, key_url(id: key) %>
+      </td>
+      <td>
+        <%#= link_to 'Delete', '#',class: 'btn btn-danger btn-xs' %>
+        <%#= link_to 'Delete',  "/cache_manager/keys/a",  method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger btn-xs' %>
+        <%= link_to "Visit Other Site", "http://www.rubyonrails.org/", data: { confirm: "Are you sure?" } %>
+      </td>
+    </tr>
     <% end %>
   </tbody>
 </table>
