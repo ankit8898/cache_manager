@@ -9,5 +9,13 @@ module CacheManager
     def show
       @key = Key.find(params[:id])
     end
+
+    def destroy
+      puts "-------#{params[:id]}"
+      @key = Key.destroy(params[:id])
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: 'Key successfully deleted.' }
+      end
+    end
   end
 end
